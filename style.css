@@ -28,6 +28,12 @@ h1 {
   margin: 0;
   padding: 20px;
   font-weight: 700;
+  color: white;
+}
+
+header p {
+  color: white;
+  font-weight: 500;
 }
 
 h3 {

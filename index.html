@@ -17,7 +17,6 @@
     <title>JavaScript DOM Cheatsheet</title>
   </head>
   <body>
-    <p>bla</p>
     <header>
       <nav class="navbar navbar-inverse">
         <div class="container-fluid">
@@ -41,7 +40,7 @@
               </li>
               <li><a href="#create-elements">Create Elements</a></li>
               <li><a href="#modify-elements">Modify Elements</a></li>
-              <li><a href="#">Traverse DOM tree</a></li>
+              <li><a href="#traverse-dom">Traverse DOM tree</a></li>
               <li><a href="#">Event Listeners</a></li>
               <li><a href="#">Mouse Events</a></li>
               <li><a href="#">Keyboard Events</a></li>
@@ -182,9 +181,17 @@
           </div>
           <div class="card" style="width: 24rem">
             <div class="card-body">
-              <h5 class="card-title">createTextNode</h5>
+              <h5 class="card-title">outerHTML</h5>
               <p class="card-text">
-                Creates a new text node with the specified text
+                Sets or returns the entire HTML content of an element
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">textContent</h5>
+              <p class="card-text">
+                Sets or returns the text content of a specified node
               </p>
             </div>
           </div>
@@ -192,18 +199,23 @@
         <div class="col-md-4">
           <div class="card" style="width: 24rem">
             <div class="card-body">
-              <h5 class="card-title">appendChild</h5>
+              <h5 class="card-title">style</h5>
+              <p class="card-text">Sets the inline style of an element</p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">getAttribute</h5>
               <p class="card-text">
-                Adds a node to the end of the list of children of a specified
-                parent node
+                Gets the value of an attribute for an element
               </p>
             </div>
           </div>
           <div class="card" style="width: 24rem">
             <div class="card-body">
-              <h5 class="card-title">removeChild</h5>
+              <h5 class="card-title">setAttribute</h5>
               <p class="card-text">
-                Removes a child node from a specified parent node
+                Sets the value of an attribute for an element
               </p>
             </div>
           </div>
@@ -211,9 +223,94 @@
         <div class="col-md-4">
           <div class="card" style="width: 24rem">
             <div class="card-body">
-              <h5 class="card-title">replaceChild</h5>
+              <h5 class="card-title">hasAttribute</h5>
               <p class="card-text">
-                Replaces an old child node with a new node
+                Returns a boolean indicating if the element has the specific
+                attribute
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">removeAttribute</h5>
+              <p class="card-text">Removes an attriibute</p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">classList</h5>
+              <p class="card-text">
+                Gets the class list of an element, can be used to add, remove,
+                or toggle a class
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="line"></div>
+
+    <section class="container" id="traverse-dom">
+      <h3>Traversing the DOM Tree</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">parentNode</h5>
+              <p class="card-text">
+                Returns the parent node of a specified node
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">childNodes</h5>
+              <p class="card-text">
+                Returns a collection of a node's child nodes
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">firstChild</h5>
+              <p class="card-text">
+                Returns the first child node of a specified node
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">lastChild</h5>
+              <p class="card-text">
+                Returns the last child node of a specified node
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">previousSibling</h5>
+              <p class="card-text">
+                Returns the previous sibling node of a specified node
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">nextSibling</h5>
+              <p class="card-text">
+                Returns the next sibling node of a specified node
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">insertBefore</h5>
+              <p class="card-text">
+                Inserts a new element before a specified child element
               </p>
             </div>
           </div>
