@@ -18,6 +18,10 @@ body {
   background-color: #212529;
 }
 
+a:active {
+  background-color: black;
+}
+
 header {
   background-color: #6ab7ba;
   margin: 0;
