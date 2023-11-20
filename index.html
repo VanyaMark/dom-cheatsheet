@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,700;0,800;0,900;1,300;1,500;1,900&family=Poppins:ital,wght@0,100;0,200;1,100;1,200&family=Quicksand:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link href="style.css" rel="stylesheet" />
+    <title>JavaScript DOM Cheatsheet</title>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button
+              type="button"
+              class="navbar-toggle"
+              data-toggle="collapse"
+              data-target="#myNavbar"
+            >
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">DOM</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active">
+                <a href="#access-elements">Access Elements</a>
+              </li>
+              <li><a href="#create-elements">Create Elements</a></li>
+              <li><a href="#modify-elements">Modify Elements</a></li>
+              <li><a href="#">Traverse DOM tree</a></li>
+              <li><a href="#">Event Listeners</a></li>
+              <li><a href="#">Mouse Events</a></li>
+              <li><a href="#">Keyboard Events</a></li>
+              <li><a href="#">Form Events</a></li>
+              <li><a href="#">Other Events</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="container text-center">
+        <h1>JavaScript DOM Cheatsheet</h1>
+        <p>
+          The Document Object Mode (DOM) is the structural representation of the
+          HTML elements arranged in hierarchical way to display a webpage and
+          also making it easy to access and manipulate them.
+        </p>
+      </div>
+    </header>
+
+    <section class="container mt-4" id="access-elements">
+      <h3>Accessing Elements</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">getElementById</h5>
+              <p class="card-text">Returns the element with the specified id</p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">querySelector</h5>
+              <p class="card-text">
+                Returns the first element that matches the specified CSS
+                selector
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">querySelectorAll</h5>
+              <p class="card-text">
+                Returns a collection of all elements that match the specified
+                CSS selector
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">getElementByTagName</h5>
+              <p class="card-text">
+                Returns a collection of elements with the specified tag name
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">getElementByClassName</h5>
+              <p class="card-text">
+                Returns a collection of elements with the specified class name
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="line"></div>
+
+    <section class="container" id="create-elements">
+      <h3>Creating / Deleting Elements</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">createName</h5>
+              <p class="card-text">
+                Creates a new element with the specified tag name
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">createTextNode</h5>
+              <p class="card-text">
+                Creates a new text node with the specified text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">appendChild</h5>
+              <p class="card-text">
+                Adds a node to the end of the list of children of a specified
+                parent node
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">removeChild</h5>
+              <p class="card-text">
+                Removes a child node from a specified parent node
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">replaceChild</h5>
+              <p class="card-text">
+                Replaces an old child node with a new node
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="line"></div>
+
+    <section class="container" id="modify-elements">
+      <h3>Modifying Elements</h3>
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">innerHTML</h5>
+              <p class="card-text">
+                Sets or returns the HTML content within an element
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">createTextNode</h5>
+              <p class="card-text">
+                Creates a new text node with the specified text
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">appendChild</h5>
+              <p class="card-text">
+                Adds a node to the end of the list of children of a specified
+                parent node
+              </p>
+            </div>
+          </div>
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">removeChild</h5>
+              <p class="card-text">
+                Removes a child node from a specified parent node
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card" style="width: 24rem">
+            <div class="card-body">
+              <h5 class="card-title">replaceChild</h5>
+              <p class="card-text">
+                Replaces an old child node with a new node
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="container text-center">
+      <h3>What We Do</h3>
+      <br />
+      <div class="row">
+        <div class="col-sm-4">
+          <img
+            src="https://placehold.it/150x80?text=IMAGE"
+            class="img-responsive"
+            style="width: 100%"
+            alt="Image"
+          />
+          <p>Current Project</p>
+        </div>
+        <div class="col-sm-4">
+          <img
+            src="https://placehold.it/150x80?text=IMAGE"
+            class="img-responsive"
+            style="width: 100%"
+            alt="Image"
+          />
+          <p>Project 2</p>
+        </div>
+        <div class="col-sm-4">
+          <div class="well">
+            <p>Some text..</p>
+          </div>
+          <div class="well">
+            <p>Some text..</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br />
+
+    <footer class="container-fluid text-center">
+      <p>Footer Text</p>
+    </footer>
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </body>
+</html>
