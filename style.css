@@ -65,15 +65,7 @@ h5 {
 }
 
 @media only screen and (max-width: 990px) {
-  h3 {
-    text-align: center;
-  }
-
-  .card-container {
-    display: flex;
-    align-items: center;
-  }
-
-  .container .card {
+  body {
+    font-size: 1.3rem;
   }
 }
