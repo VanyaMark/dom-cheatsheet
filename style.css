@@ -69,3 +69,9 @@ h5 {
     font-size: 1.3rem;
   }
 }
+
+@media only screen and (min-width: 991px) {
+  .card {
+    width: 24rem;
+  }
+}
