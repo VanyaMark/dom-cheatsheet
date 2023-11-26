@@ -63,3 +63,17 @@ h5 {
   right: 20px;
   display: none;
 }
+
+@media only screen and (max-width: 990px) {
+  h3 {
+    text-align: center;
+  }
+
+  .card-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .container .card {
+  }
+}
